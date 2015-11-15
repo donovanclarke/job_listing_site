@@ -1,47 +1,32 @@
 <div class="container" id="login-page">
   <p id="notice"><%= notice %></p>
   <div class="row">
-    <div class="col-md-4"></div>
-    <div class="col-md-4">
-      <p>
-        <strong>Job title:</strong>
-        <%= @job.job_title %>
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+      <h1><%= @job.job_title %></h1>
+      <p class="job-date-show">
+        <%= @job.created_at.strftime("%b %d, %Y") %>
       </p>
-
-      <p>
-        <strong>Job category:</strong>
-        <%= @job.job_category %>
+      <p class="job-info">
+        <%= @job.job_name %><br>
+        <%= @job.job_headquarters %><br>
+        <%= link_to @job.job_url %>
       </p>
-
-      <p>
-        <strong>Job headquarters:</strong>
-        <%= @job.job_headquarters %>
-      </p>
-
-      <p>
-        <strong>Job description:</strong>
-        <%= @job.job_description %>
-      </p>
-
-      <p>
-        <strong>Job apply:</strong>
+      <hr>
+    </div>
+    <div class="col-md-3"></div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-md-3"></div>
+      <div class="col-md-6">
+        <%= @job.job_description.html_safe %>
+      <div class="job-apply-box">
         <%= @job.job_apply %>
-      </p>
+      </div>
 
-      <p>
-        <strong>Job name:</strong>
-        <%= @job.job_name %>
-      </p>
 
-      <p>
-        <strong>Job url:</strong>
-        <%= @job.job_url %>
-      </p>
-
-      <p>
-        <strong>Job email:</strong>
-        <%= @job.job_email %>
-      </p>
       <% if user_signed_in? && current_user.admin? %>
         <%= link_to 'Edit', edit_job_path(@job) %> |
         <%= link_to 'Back', jobs_path %>
@@ -49,6 +34,6 @@
         <%= link_to 'Back', root_path %>
       <% end %>
     </div>
-    <div class="col-md-4"></div>
+    <div class="col-md-3"></div>
   </div>
 </div>

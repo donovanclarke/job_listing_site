@@ -52,4 +52,5 @@ group :development do
   gem 'cancancan'
   gem 'will_paginate', '~> 3.0.5'
   gem 'font-awesome-sass'
+  gem 'ckeditor_rails'
 end
