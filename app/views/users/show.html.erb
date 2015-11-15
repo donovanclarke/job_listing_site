@@ -1,24 +1,32 @@
-<p id="notice"><%= notice %></p>
+<div class="container" id="login-page">
+  <p id="notice"><%= notice %></p>
+  <div class="row">
+    <div class="col-md-2"></div>
+    <div class="col-md-8">
 
-<p>
-  <strong>First name:</strong>
-  <%= @user.first_name %>
-</p>
+      <p>
+        <strong>First name:</strong>
+        <%= @user.first_name %>
+      </p>
 
-<p>
-  <strong>Last name:</strong>
-  <%= @user.last_name %>
-</p>
+      <p>
+        <strong>Last name:</strong>
+        <%= @user.last_name %>
+      </p>
 
-<p>
-  <strong>User name:</strong>
-  <%= @user.user_name %>
-</p>
+      <p>
+        <strong>User name:</strong>
+        <%= @user.user_name %>
+      </p>
 
-<p>
-  <strong>Company name:</strong>
-  <%= @user.company_name %>
-</p>
+      <p>
+        <strong>Company name:</strong>
+        <%= @user.company_name %>
+      </p>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+      <%= link_to 'Edit', edit_user_path(@user) %> |
+      <%= link_to 'Back', users_path %>
+    </div>
+    <div class="col-md-2"></div>
+  </div>
+</div>
