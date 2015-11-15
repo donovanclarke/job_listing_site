@@ -4,6 +4,12 @@
     <div class="col-md-8">
       <h2>Find your dream tech job</h2>
       <p>Where employers come to find their dream employees, and where employees come to find their dream employer.</p>
+      <div class="search-form">
+        <%= bootstrap_form_tag url: root_path, method: "get", layout: :inline do |form| %>
+          <%= form.text_field :q, hide_label: true, placeholder: "Search for your future job!" %>
+          <%= form.submit "Search" %>
+        <% end %>
+      </div>
       <table class="table table-striped">
         <thead>
           <tr>
