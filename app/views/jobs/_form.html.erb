@@ -15,7 +15,14 @@
     <%= f.text_field :job_title %>
   </div>
   <div class="field">
-    <%= f.text_field :job_category %>
+    <%= f.radio_button :job_category, 'Design', label: 'Design' %>
+    <%= f.radio_button :job_category, 'Programming', label: 'Programming' %>
+    <%= f.radio_button :job_category, 'Customer Support', label: 'Customer Support' %>
+    <%= f.radio_button :job_category, 'Copywriting', label: 'Copywriting' %>
+    <%= f.radio_button :job_category, 'DevOps & Sysadmin', label: 'DevOps & Sysadmin' %>
+    <%= f.radio_button :job_category, 'Marketing', label: 'Marketing' %>
+    <%= f.radio_button :job_category, 'Business/ Exec & Management', label: 'Business/ Exec & Management' %>
+    <%= f.radio_button :job_category, 'All Other', label: 'All Other' %>
   </div>
   <div class="field">
     <%= f.text_field :job_headquarters %>

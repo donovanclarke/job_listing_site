@@ -1,8 +1,7 @@
 <div class="container" id="job-page">
   <p id="notice"><%= notice %></p>
   <div class="row">
-    <div class="col-md-2"></div>
-    <div class="col-md-8">
+    <div class="col-md-12">
       <h1>Listing Jobs</h1>
 
       <table class="table table-striped">
@@ -26,7 +25,7 @@
             <td><%= job.job_title %></td>
             <td><%= job.job_category %></td>
             <td><%= job.job_headquarters %></td>
-            <td><%= job.job_description %></td>
+            <td><%= h truncate(job.job_description, :length => 25).html_safe %></td>
             <td><%= job.job_apply %></td>
             <td><%= job.job_name %></td>
             <td><%= job.job_url %></td>
@@ -45,6 +44,5 @@
 
       <%= link_to 'New Job', new_job_path %>
     </div>
-    <div class="col-md-2"></div>
   </div>
 </div>
