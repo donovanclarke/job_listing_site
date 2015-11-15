@@ -42,9 +42,12 @@
         <strong>Job email:</strong>
         <%= @job.job_email %>
       </p>
-
-      <%= link_to 'Edit', edit_job_path(@job) %> |
-      <%= link_to 'Back', jobs_path %>
+      <% if user_signed_in? && current_user.admin? %>
+        <%= link_to 'Edit', edit_job_path(@job) %> |
+        <%= link_to 'Back', jobs_path %>
+      <% else %>
+        <%= link_to 'Back', root_path %>
+      <% end %>
     </div>
     <div class="col-md-4"></div>
   </div>
